@@ -9,7 +9,7 @@ import Register from './pages/Register';
 import Create from './pages/Create';
 import Dashboard from './pages/dshborad/Dashboard';
 import SinglePost from './pages/singlepost/Singlepost';
-// import About from './pages/about/About';
+
 function App() {
   return (
    <Routes>
@@ -21,7 +21,7 @@ function App() {
       <Route path={"/create"}element={<Create/>} />
       <Route path={"/dashboard"}element={<Dashboard/>} />
       <Route path={"/singlepost"}element={<SinglePost/>} />
-      {/* <Route path={"/about"}element={About} /> */}
+     
     </Route>
    </Routes>
    ); 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -25,7 +26,7 @@ const Footer = () => {
         <ul>
           <li className='footer5'>About</li>
           <li className='footer5'>Contact</li>
-          <li className='footer5'>Home</li>
+          <li className='footer5'><Link to =''style={{color: 'inherit', textDecoration: 'inherit'}}>Home</Link></li>
         </ul>
       </div>
       <div className="footer-newsletter">

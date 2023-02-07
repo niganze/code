@@ -62,7 +62,27 @@ export default function Singlepost() {
             <i className="singlepostIcon fa-solid fa-pen-to-square"></i>
             <i className="singlepostIcon  fa-solid fa-trash"></i>
             </div>
+            <div className="comments">
+              <div className="form">
+              <div className="coments">
+            <div className="form">
+                <div className="formGroup">
+                    <label htmlFor="">userName</label>
+                    <input type="text" placeholder='UserName'/>
+                </div>
+                <div className="formGroup">
+                    <label htmlFor="">Drop Your Comment</label>
+                    <textarea  placeholder='Description'/>
+                </div>
+                <div className="formGroup">
+                    <input type="submit" value="comment" className='btn'/>
+                </div>
+            </div>
+        </div>
+              </div>
+            </div>
       </div>
+      
     </div>
   );
 }

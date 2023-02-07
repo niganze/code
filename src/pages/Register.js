@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
+import './Register.css'
 const [username, setUsername]= ('');
 const [password, setPassword]= ('');
-
 function Register() {
   return (
    
         <form className='register'onSubmit={Register}>
-          <h1>welcome again </h1> 
-           <h4>Register Here</h4> 
+          <h1>WELCOME TO OUR BLOG PORTAL</h1> 
+           <h4>   Register Here  </h4> 
            <input type="text" placeholder="fullname" 
            value ={username}
            onChange ={ev => setUsername(ev.target.value)}/>
@@ -19,6 +19,9 @@ function Register() {
            value ={username}
            onChange ={ev => setUsername(ev.target.value)}/>
            <input type="password" placeholder="Password" 
+            value ={password}
+            onChange ={ev => setPassword(ev.target.value)}/>
+            <input type="password" placeholder="verfiy password" 
             value ={password}
             onChange ={ev => setPassword(ev.target.value)}/>
            

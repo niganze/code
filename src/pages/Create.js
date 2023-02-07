@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactQuill from 'react-quill'
 import 'react-quill/dist/quill.snow.css'
+// import './Create.css'
 
 function Create() {
   return (
@@ -8,13 +9,12 @@ function Create() {
         <input type="title" name="title" placeholder={'Title'} />
         <input type="summary" name="text" placeholder={'summary'} />
         <input type={'file'}/>
-        <ReactQuill/>
+        <ReactQuill/> 
         <button type="submit" style={
             
-            {marginTop:'20px'}
+            {marginTop:'80px'}
         }>Create post</button>
     </form>
   ) 
 }
-
 export default Create
