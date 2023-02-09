@@ -4,7 +4,7 @@ import 'react-quill/dist/quill.snow.css'
 // import './Create.css'
 
 function Create() {
-  return (
+return (
     <form className='create'>
         <input type="title" name="title" placeholder={'Title'} />
         <input type="summary" name="text" placeholder={'summary'} />

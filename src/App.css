@@ -196,11 +196,24 @@ p {
   color: blue;
   text-decoration: underline;
 }
+.buttom {
+  background-color: rgb(10, 10, 10);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 2px;
+  border: none;
+  cursor: pointer;
+}
 
 @media (max-width: 767px) {
   header {
     align-items: center;
     display: flex;
+    position: relative;
   }
   div.post {
     grid-template-columns: 1fr;
@@ -211,6 +224,17 @@ p {
   }
   .logor  {
     display: none;
+    /* position:absolute; */
+  }
+  .links {
+    /* position: absolute; */
+    top: 6px;
+    right: 0;
+    font-family: bold;
+    font-size: none;
+    font-weight: bold;
+    /* font-size: 1.5rem; */
+    color: black;
   }
   #bagger {
     display: flex;
