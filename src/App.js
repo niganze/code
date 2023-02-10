@@ -23,10 +23,6 @@ function App() {
       fetchBlog();
     },[])
     console.log (blogs)
-
-
-
-
   return (
    <Routes>
     <Route path="/"element={<Layout/>}>
@@ -34,7 +30,8 @@ function App() {
       <Route path={"/login"}element={<Login/>} />
       <Route path={"/register"}element={<Register/>} />
       <Route path={"/create"}element={<Create/>} />
-      <Route path={"/dashboard"}element={<Dashboard/>} />
+      <Route path={"/dashboard"}element={<Dashboard blogs={blogs}/>} />
+      
       <Route path={"/:blogId"}element={<SinglePost  blogs={blogs}/>} />
     </Route>
    </Routes>

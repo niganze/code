@@ -1,102 +1,91 @@
-
 .dashboard {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  background: #161616;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.main-content {
+  width: 100%;
+  padding: 20px;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #ddd;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.button3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete, .edit {
+  background-color: #f44336;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 48%;
+}
+
+.edit {
+  background-color: #2196F3;
+}
+.title {
+  font-size: 23px;
+}
+
+@media only screen and (max-width: 600px) {
+  .dashboard {
+    flex-direction: column;
   }
+
   .sidebar {
-    width: 200px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  } 
-  
- .main-content{
-  margin-left: 10px;
- }
- .main-content .one{
-  margin-left: none;
-  font-weight: bold;
- }
-  
-  
-  .sidebar h2 {
-    font-weight: bold;
-    margin-bottom: 20px;
+    width: 100%;
   }
-  
-  .Dashboardf {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  
-    
-    .sidebar a {
-    display: block;
-    text-decoration: none;
-    color: #333;
-    }
-  
-  table {
-    width: 189%;
-    margin-top: 20px;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    border: 1px solid #dddddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #dddddd;
-  }
-  
-  .button3 {
-    display: grid;
-    justify-content: space-between;
-  }
-  .button3 button {
-    margin-right: 10px;
-  }
-  
-  
-  button.delete {
-    background-color: rgb(150, 53, 53);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button.edit {
-    background-color: rgb(88, 151, 88);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-  }
-  button.update {
-    background-color: rgb(47, 47, 105);
-    color: white;
-    cursor:pointer;
-  }
-  button:hover {
-    background-color: darkgray;
-    color: white;
-  }
-  
-  button.selected {
-    background-color: darkgray;}
-    
-  .button3{
-    display: flex;
-  } 
+}
+
+
   @media only screen and (max-width: 767px) {
     .sidebar {
       width: 100%;
