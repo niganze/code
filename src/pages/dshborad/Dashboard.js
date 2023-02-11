@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Dashboard.css';
 
-function BlogDashboard({blogs}) {
+function Dashboard({blogs}) {
   const [blogss, setblogss] = useState([
     { id: 1, title: 'blogs 1', summary: 'Summary 1' },
     { id: 2, title: 'blogs 2', summary: 'Summary 2' },
@@ -13,7 +13,6 @@ function BlogDashboard({blogs}) {
   function handleDelete(id) {
     
   }
-  
   function handleEdit(id) {
     
   }
@@ -61,5 +60,5 @@ function BlogDashboard({blogs}) {
   );
 }
 
-export default BlogDashboard;
+export default Dashboard;
 
