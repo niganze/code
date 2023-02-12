@@ -14,7 +14,7 @@ function Header() {
       <div className='links'>
       <div className={navOpen? "nav-open":'logor'}>
       <Link to="/">HOME</Link>
-      <Link to="/create">WRITE</Link>
+      {/* <Link to="/create">WRITE</Link> */}
       <Link to="/login" >LOGIN</Link>
       <Link to ="/register">REGISTER</Link>
       </div>

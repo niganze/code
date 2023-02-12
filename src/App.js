@@ -8,7 +8,6 @@ import DashBord from './pages/dashboard2/Dashbord';
 import SinglePost from './pages/singlepost/Singlepost';
 import { useEffect, useState } from 'react';
 import Manage from './pages/dashboard2/Manage'
-import CreateNewuser from './pages/dashboard2/CreateNewuser'
 import Logout from './pages/dashboard2/Logout'
 import axios from 'axios';
 import CreateNewblog from './pages/dashboard2/CreateNewblog';
@@ -36,7 +35,6 @@ function App() {
       <Route path={"/:blogId"}element={<SinglePost  blogs={blogs}/>} />
       <Route path="/manage" element={<Manage blogs={blogs}/>} />
       <Route path="/Create" element={<CreateNewblog />} />
-      <Route path="/CreateNewuser" element={<CreateNewuser />} />
       <Route path="/logout" element={<Logout />} />
     </Route>
    </Routes>

@@ -48,7 +48,7 @@ export default function Singlepost({blogs}) {
               <div className="coments">
             <div className="form">
                 <div className="formGroup">
-                    <label htmlFor="">userName</label>
+                    <label htmlFor="">UserName</label>
                     <input type="text" placeholder='UserName'/>
                 </div>
                 <div className="formGroup">

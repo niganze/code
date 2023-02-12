@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import Footer from '../Footer/Footer'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
-const CreateNewblog = () => {
-  const { register, handleSubmit, reset } = useForm({});
-  const onSubmit = async (data) => {
+const Updateblog = () => {
+const { register, handleSubmit, reset } = useForm({});
+const onSubmit = async (data) => {
 
     console.log(data.description);
     const formData = new FormData();
@@ -13,7 +12,6 @@ const CreateNewblog = () => {
     formData.append("description", data.description);
     formData.append("image", data.image[0]);
     console.log(formData.get("title"));
-
     try {
        await axios.post("https://blogapi-wm30.onrender.com/api/v1/blog", formData,{
         headers:{
@@ -31,14 +29,6 @@ const CreateNewblog = () => {
   };
 
 
-
-
-
-
-
-
-
-
   return (
     <>
     <section id='Dashbord'>
@@ -51,7 +41,6 @@ const CreateNewblog = () => {
             <Link to="/DashBoard"><li>Home</li></Link>
             <Link to="/Manage"><li>Manage</li></Link>
             <Link to="/Create"><li>CreateNewBlog</li></Link>
-            <Link to="/CreateNewuser"><li>CreateUser</li></Link>
             <Link to="/logout"><li>logout</li></Link>
         </ul>
       </div>
@@ -88,10 +77,10 @@ const CreateNewblog = () => {
     </div>
 
 </section>
-    {/* <Footer/> */}
+   
     </>
 
   )
 }
 
-export default CreateNewblog
+export default Updateblog

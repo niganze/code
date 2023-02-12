@@ -6,13 +6,13 @@
     flex-direction: row;
     gap: 1rem;
     height: 100vh;
-    /* background-color: antiquewhite; */
+    
     border-radius: 0.5rem;
     padding:  1rem;
 }
 .blogMenu{
     flex-basis: 30%;
-    border-left: 10px solid gray;
+    border-left: 15px solid rgb(6, 43, 206);
     background-color: black;
     border-radius: 0.5rem 0 0 0.5rem;
     opacity: 0.7;
@@ -34,14 +34,29 @@ ul a li{
     transition: all 400ms ease;
 }
 ul a li:hover{
-    background-color: rgb(44, 41, 41);
+    background-color: rgb(73, 116, 173);
     color: white;
     font-size: medium;
     font-weight: 800;
     border-left: 0.7px solid white;
     border-bottom: 0.7px solid white;
 }
-
+.bbb {
+    width: 50px;
+    height: 80px;
+  }
+  .panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    align-items: space-between;
+  }
+  
+  .panel h2 {
+    margin: 10px 0;
+  }
+  
 .blogContent{
     flex-basis: 100%;
 }
@@ -89,18 +104,21 @@ ul a li:hover{
     gap: 2rem;
     padding: 1rem 2rem;
 }
-.btn{
+.btn .cards:hover{
     width:90px;
     height: 40px;
     cursor: pointer;
     color: rgb(255, 252, 252);
-    background-color: rgb(44, 44, 204);
+    background-color: rgb(231, 231, 231);
     font-size: 1rem;
     font-weight: bold;
     border-radius: 0.4rem;
 }
 .btn:nth-child(1){
-    background-color: brown;
+    background-color: rgb(80, 184, 97);
+}
+.btn:nth-child(1) :hover{
+    background-color: rgb(80, 116, 184);
 }
 .actions{
     display: flex;
@@ -151,9 +169,6 @@ ul a li:hover{
         margin-bottom: 4rem;
     
     }
-    #footer{
-        margin-top: 10rem;
-    }
 }
 
 table{
@@ -161,18 +176,19 @@ table{
     width:100%;
     border-collapse:collapse;
     text-align:left;
-     
+    position: relative;
   }
   
   th{
-    background-color:#ddd;
+    background-color:#f8f4f4;
     padding:8px;
-    border:1px solid grey;
+    border:none;
+    width: 50%;
   }
   
   td{
     padding:8px;
-    border:1px solid grey;
+    border:none !important;
   }
   
   .title{
@@ -182,10 +198,11 @@ table{
   .button3{
     display:flex;
     justify-content:center;
+    width: 50%;
   }
   
   .delete{
-    background-color:red;
+    background-color:rgb(126, 66, 66);
     color:white;
     padding:5px 10px;
     border:none;
@@ -195,7 +212,7 @@ table{
   }
   
   .edit{
-    background-color:blue;
+    background-color:rgb(23, 83, 43);
     color:white;
     padding:5px 10px;
     border:none;
@@ -208,15 +225,10 @@ table{
   }
   
   .titlee{
-    width:40%;
+    width:20%;
   }
   
   
-  
-
-
-
-
 
 @media only screen and (max-width: 600px) {
     .container{

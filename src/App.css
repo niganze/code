@@ -4,6 +4,9 @@
 
 body {
   color: #333;
+  min-height: 100vh;
+   display: flex;
+   flex-direction: column;
 }
 
 img {
@@ -12,11 +15,12 @@ img {
   height: 32vh;
 }
 
-/* main {
-  padding: 10px;
-  max-width: 80%;
+main {
+ 
   margin: 0 auto;
-} */
+  min-height: calc(100vh -211px -58px);
+} 
+
 
 header {
   display: flex;
@@ -29,6 +33,9 @@ header {
 header a {
   text-decoration: none;
   color: inherit;
+  /* color: red; */
+  display: grid;
+  
 }
 
 header a.logo {
@@ -62,30 +69,13 @@ div.post {
 .text {
   max-width: 100%;
   margin: 0 auto;
-  /* background-color: red; */
+ 
 }
 
-
-
-/* div.post p.info {
-  margin: 6px 0;
-  color: #888;
-  font-size: 0.7rem;
-  font-weight: bold;
-  display: flex;
-  gap: 10px;  */
-  
-
-
-/* div.post p.info a.author {
-  color: #333;
-} */
 
 div.post p.summary {
   margin: 10px 0;
   line-height: 1.4 rem;
-  
-  
 }
 
 form.login,
@@ -228,6 +218,26 @@ img{
 {
   aspect-ratio: 1/1;
 }
+.editblog {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background-color: #161515;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: white;
+  background-color:  #e6dddd11;
+  height: 600px;
+
+}
+.blogContent {
+background-color: #000;
+padding: 10px;
+}
 
 @media (max-width: 767px) {
   header {
@@ -242,18 +252,15 @@ img{
   form.register {
     width: 90%;
   }
-  .logor  {
-    display: none;
-    /* position:absolute; */
-  }
+ 
   .links {
-    /* position: absolute; */
+   
     top: 6px;
     right: 0;
     font-family: bold;
     font-size: none;
     font-weight: bold;
-    /* font-size: 1.5rem; */
+    
     color: black;
   }
   #bagger {
@@ -268,7 +275,7 @@ img{
     font-size: 1rem;
   }
   #bagger {
-    display: block;
+    display: grid;
     font-size: 20px;
     
   }
@@ -279,7 +286,14 @@ img{
   } 
   .nav-open{
     color: rgb(0, 0, 0);
-    display:flex;
+    display:none !important;;
+    flex-direction: column;
+  } 
+  .logor {
+    text-decoration: none;
+    color: inherit;
+    color: black;
+    display: flex;
     flex-direction: column;
   }
 }

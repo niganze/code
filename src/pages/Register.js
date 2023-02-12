@@ -150,7 +150,7 @@ const Register = () => {
                />
             <p id="uidnote" className={nameFocus && name &&
               !validName ? "instructions" : "offscreen"}>
-                username not valid
+                {/* username not valid */}
                </p>
                <label>Email:</label>    
                <input type="text" 
@@ -173,7 +173,9 @@ const Register = () => {
         onFocus={() => setPasswordFocus(true)}
         onBlur={() => setPasswordFocus(false)}/>
         <p id="pwdnote" className={PasswordFocus && !validPassword? "instructions":
-      "offscreen"}>Must include uppercase and lowecase letters</p>
+      "offscreen"}>
+        {/* Must include uppercase and lowecase letters */}
+      </p>
          
          <label>Confirm password:</label>
         <input 
@@ -187,7 +189,9 @@ const Register = () => {
         onBlur={() => setMatchPwdFocus(false)}/>
 
         <p id="Matchpwdnote" className={matchPwdFocus && !validMatchPwd? "instructions":
-      "offscreen"}>Password does not match</p>
+      "offscreen"}>
+        {/* Password does not match */}
+      </p>
       
       <button type="submit"
       className="btn-register"
