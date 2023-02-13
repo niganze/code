@@ -13,12 +13,11 @@ function IndexPage({blogs}) {
           <div className="text">
             <h2>{item.title}</h2>
             <p className="info">
-            <a className="">{item.author}</a>
+            <a className="vv">{item.author}</a>
             <time>{item.time}</time></p>
            <p className='summary'>{item.description.slice(0,200)}</p>
            <buttom className="buttom"><Link to={`${item._id}`}style={{color: 'inherit', textDecoration: 'inherit'}}>READMORE</Link></buttom>
           </div>
-         
         </div>
         )
        } )  

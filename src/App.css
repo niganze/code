@@ -235,9 +235,11 @@ img{
 
 }
 .blogContent {
-background-color: #000;
+background-color: #0b312d6b;
+
 padding: 10px;
 }
+
 
 @media (max-width: 767px) {
   header {

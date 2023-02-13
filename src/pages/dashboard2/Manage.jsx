@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import axios from 'axios';
 import { useForm } from 'react-hook-form'
 import {useState, useEffect} from "react";
+
+
+
 const Manage = ({blogs}) => {
 const [modal, setModal] = useState(false);
 const [selected, setSelected]= useState(null)
@@ -76,7 +79,7 @@ const getSingle = async (id) =>{
                 <Link to="/DashBoard"><li>Home</li></Link>
                 <Link to="/Manage"><li>Manage</li></Link>
                 <Link to="/Create"><li>CreateNewBlog</li></Link>
-                <Link to="/"><li>logout</li></Link>
+                <Link to="/logout"><li>logout</li></Link>
             </ul>
           </div>
             <table border={0} >
@@ -127,9 +130,12 @@ const getSingle = async (id) =>{
         id="file"
         {...register("image")}
       />
-      <button type="submit" style={{ marginTop: "80px" }}>
+      <div className=''> 
+        <button type="submit" style={{ marginTop: "80px" }}>
         Create post
       </button>
+      <button className='cancel' onClick={() => setModal(false)}>cancel</button>
+      </div>
     </form>
       </div>
       </div>

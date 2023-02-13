@@ -75,7 +75,7 @@ function Login() {
           <section>
             <h1> you are logged in!</h1>
             <br/>
-            <p className='wellcome'><Link to ="/dashboard">go to home</Link></p>
+            <p className='wellcome'><Link to ="/dashboard">dashBoard</Link></p>
                
           </section>
         ) : (
