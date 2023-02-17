@@ -66,11 +66,7 @@ div.post {
   max-width: 80%;
   margin: 0 auto;
 }
-.text {
-  max-width: 100%;
-  margin: 0 auto;
- 
-}
+
 
 
 div.post p.summary {
@@ -115,7 +111,7 @@ button {
 
 form.login h1, h4,
 form.register h1 {
-  /* text-align: center; */
+color: #070707;
 }
 form.login h1{
   font-size: 3rem;
@@ -186,12 +182,11 @@ input[type="submit"] {
 p {
   margin: 0;
 }
-
-.register-link {
-  font-weight: bold;
-  color: blue;
-  text-decoration: underline;
+.text {
+ 
+  margin-top: -1.6rem;
 }
+
 .buttom {
   background-color: rgb(10, 10, 10);
   color: white;
@@ -213,32 +208,25 @@ img{
   display: block;
   object-fit: cover;
 }
-
+.image{
+  width: 100%;
+  height: 100%;
+}
 .image img
 {
   aspect-ratio: 1/1;
+  width: 100%;
 }
-.editblog {
-  position: absolute;
-  top: 80%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  background-color: #161515;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100px;
-  color: white;
-  background-color:  #e6dddd11;
-  height: 600px;
 
-}
-.blogContent {
-background-color: #0b312d6b;
 
-padding: 10px;
+.container {
+  
+  height: 23vh;
+  position: relative;
+  margin-top: -3rem;
+  margin-left: -4rem;
 }
+
 
 
 @media (max-width: 767px) {

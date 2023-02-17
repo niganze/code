@@ -1,19 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
 const Updateblog = () => {
 const { register, handleSubmit, reset } = useForm({});
 const onSubmit = async (data) => {
-
-    console.log(data.description);
+    console.log(data.content);
     const formData = new FormData();
     formData.append("title", data.title);
-    formData.append("description", data.description);
+    formData.append("author", data.author);
+    formData.append("content", data.content);
     formData.append("image", data.image[0]);
     console.log(formData.get("title"));
+    console.log (localStorage.getItem("token"))
     try {
-       await axios.post("https://blogapi-wm30.onrender.com/api/v1/blog", formData,{
+       await axios.post("https://blogapi-uvr7.onrender.com/api/v1/blog/blogPost", formData,{
         headers:{
           "Content-Type": "multipart/form-data",
           Authorization:`Bearer ${localStorage.getItem("token")}`
@@ -21,45 +21,30 @@ const onSubmit = async (data) => {
       });
        reset();
       alert ("Successfully");
-    
-      
-    } catch (err) {
-      console.error(err.response);
+    } catch (error) {
+      console.error(error.response);
     }
   };
-
-
   return (
     <>
-    <section id='Dashbord'>
-    <h2>ADMIN/BlOG CONTROL PANEL</h2>
-
-    <div className="container blogContainer">
-
-      <div className="blogMenu">
-        <ul>
-            <Link to="/DashBoard"><li>Home</li></Link>
-            <Link to="/Manage"><li>Manage</li></Link>
-            <Link to="/Create"><li>CreateNewBlog</li></Link>
-            <Link to="/logout"><li>logout</li></Link>
-        </ul>
-      </div>
-
       <div className="blogContent">
-        <h2>Create New Blog</h2>
+        <h1>Create New Blog</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
       <input type="text" 
         {...register("title")}
         placeholder={"Enter Title"}
       />
       <textarea
-        {...register("description")}
+        {...register("content")}
         id=""
         cols="30"
         rows="10"
       >
-        
       </textarea>
+      <input type="text" 
+        {...register("author")}
+        placeholder={"Enter author"}
+      />
       <label htmlFor="">Image</label>
       <input
         type="file"
@@ -67,20 +52,14 @@ const onSubmit = async (data) => {
         id="file"
         {...register("image")}
       />
-      <button type="submit" style={{ marginTop: "80px" }}>
+      <br />
+      <button type="submit">
         Create post
       </button>
     </form>
-        
-       
       </div>
-    </div>
-
-</section>
-   
+  
     </>
-
   )
 }
-
 export default Updateblog

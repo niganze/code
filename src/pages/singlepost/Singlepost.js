@@ -1,17 +1,16 @@
 import { Link, useParams } from "react-router-dom";
 import "./Singlepost.css";
 import React  from 'react'
-export default function Singlepost({blogs}) {
-
-  const { blogId } = useParams();
+export default function Singlepost({AllBlogs}) {
+const { blogId } = useParams();
   console.log(blogId);
-  const single = blogs.find((item) => item._id === blogId);
-  const {title, image, description} = single;
-
-
-
-
+  const single = AllBlogs.find((item) => item._id === blogId);
+  console.log(single);
+  const {title, image, content,author,date } = single;
+  
+  
   return (
+    <>
     <div className="singlePost">
       <div className="singlePostWrapper">
         <img
@@ -28,16 +27,18 @@ export default function Singlepost({blogs}) {
         <div className="singlePostInfo">
           <span>
             Author:
+          
             <b className="singlePostAuthor">
               <Link className="link" to="/posts?username=Safak">
-                Safak
+                {author}
+                
               </Link>
             </b>
           </span>
-          <span>1 day ago</span>
+          <span>{date}</span>
         </div>
         <p className="singlePostDesc">
-          {description}
+          {content}
         </p>
         <div className="singlePostEdit">
             <i className="singlepostIcon fa-solid fa-pen-to-square"></i>
@@ -63,7 +64,7 @@ export default function Singlepost({blogs}) {
               </div>
             </div>
       </div>
-      
     </div>
+    </>
   );
 }

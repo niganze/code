@@ -45,7 +45,6 @@ function Create() {
         cols="30"
         rows="10"
       >
-        
       </textarea>
       <label htmlFor="">Image</label>
       <input
@@ -54,7 +53,7 @@ function Create() {
         id="file"
         {...register("image")}
       />
-      <button type="submit" style={{ marginTop: "80px" }}>
+      <button type="submit">
         Create post
       </button>
     </form>

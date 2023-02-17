@@ -1,9 +1,9 @@
-
+import './Dashboard.css'
 import { Link } from 'react-router-dom';
 function IndexPage({blogs}) {
-
   return (
     <>
+   
     {
        blogs.map((item) =>{
         return(

@@ -1,58 +1,83 @@
+import React from 'react'
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, } from 'recharts';
 
-import { Link } from 'react-router-dom'
-import './Dash.css'
 
-const DashBord = () => {
+const HomeDash = () => {
+  const data = [
+    {
+      name: 'Page A',
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: 'Page B',
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: 'Page C',
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+    },
+    {
+      name: 'Page D',
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: 'Page E',
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: 'Page F',
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: 'Page G',
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
+  ];
+  
+
   return (
-    <>
-    <section id='Dashbord'>
-    <div className='panel'>
-      <h2>Blog Management Dashboard</h2>
-      <h2>ADMIN PANEL </h2>
+    <div>
+
+    <LineChart
+          layout="vertical"
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis type="number" />
+          <YAxis dataKey="name" type="category" />
+          <Tooltip />
+          <Legend />
+          <Line dataKey="pv" stroke="#8884d8" />
+          <Line dataKey="uv" stroke="#82ca9d" />
+        </LineChart>
+     
+
+
+
     </div>
-        
-
-        <div className="container blogContainer">
-
-          <div className="blogMenu">
-            <ul>
-                <Link to="/"><li>Home</li></Link>
-                <Link to="/Manage"><li>Manage</li></Link>
-                <Link to="/Create"><li>CreateNewBlog</li></Link>
-                <Link to="/"><li>logout</li></Link>
-            </ul>
-          </div>
-
-          <div className="blogContent">
-            <div className="CardsContainer">
-            <div className="cards">
-              <h5>client</h5>
-              <small>10</small>
-            </div>
-            <div className="cards">
-              <h5>Blogs</h5>
-              <small>200</small>
-            </div>
-            <div className="cards">
-              <h5>Admins</h5>
-              <small>20</small>
-            </div>
-            <div className="cards">
-              <h5>Projects</h5>
-              <small>300</small>
-            </div>
-            <div className="cards">
-              <h5>Others&history</h5>
-              <small>500</small>
-            </div>
-            </div>
-          </div>
-        </div>
-
-    </section>
-       
-    </>
   )
 }
 
-export default DashBord
+export default HomeDash
